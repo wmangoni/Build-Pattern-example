@@ -47,7 +47,7 @@ include_once "builder_classes.php";
 				<h1>PADRÃO BUILDER</h1>
 				
 				<h2>
-					O padrão de Builder é um outro padrão criacional, ou seja, o seu objectivo é a criação de objetos.
+					O padrão de Builder é um padrão criacional, ou seja, o seu objectivo é a criação de objetos.
 				</h2>
 				<p>
 					Similar a proposta dos padrões Singleton, multiton e Factory.
