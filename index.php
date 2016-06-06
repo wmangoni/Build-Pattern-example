@@ -255,7 +255,7 @@ include_once "builder_classes.php";
 					</p>
 
 					<div class="col-md-12">
-						<img class="thumbnail" src="mvc.jpg" width="100%">
+						<img class="thumbnail" src="mvc.jpg" width="50%">
 					</div>
 
 				</div>
