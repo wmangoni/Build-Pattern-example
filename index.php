@@ -274,7 +274,7 @@ include_once "builder_classes.php";
 
 		<hr>
 
-		<footer>
+		<footer class="col-md-12">
 			<p>&copy; 2016 Uniritter.</p>
 		</footer>
 	</div> <!-- /container -->
