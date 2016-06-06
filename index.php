@@ -1,11 +1,11 @@
 <?php
 include_once "builder_classes.php";
-
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
+	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -28,18 +28,14 @@ include_once "builder_classes.php";
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Engenharia de Software</a>
+				<a class="navbar-brand" href="#builder">Engenharia de Software</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#builder">Padrão Builder</a></li>
 					<li><a href="#framework">Framework</a></li>
 					<li><a href="#padrao">Padrao arquitetural</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Fundo cinza</a></li>
-					<li><a href="#">Fundo preto</a></li>
-					<li class="active"><a href="#">Fundo branco <span class="sr-only">(current)</span></a></li>
+					<li><a href="#bibliografia">Bibliografia</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -218,26 +214,26 @@ include_once "builder_classes.php";
 			</div>
 		</section>
 
-		<section id="framework">
+		<section id="padrao">
 			<div class="jumbotron">
-			<div class="container">
-				<h1>PADRÃO MVC</h1>
-				<h2>
-					O padrão MVC foi descrito pela primeira vez em 1979 por Trygve Reenskaug, que trabalhava no Smalltalk.
-				</h2>
+				<div class="container">
+					<h1>PADRÃO MVC</h1>
+					<h2>
+						O padrão MVC foi descrito pela primeira vez em 1979 por Trygve Reenskaug, que trabalhava no Smalltalk.
+					</h2>
 
-				<p>
-					Além de dividir a aplicação em três tipos de componentes, o desenho MVC define as interações entre eles.
-				</p>
-				
-				<ul>
-					<li>Um controlador (controller) envia comandos para o modelo para atualizar o seu estado por exemplo, editando um documento). O controlador também pode enviar comandos para a visão associada para alterar a apresentação da visão do modelo (por exemplo, percorrendo um documento).</li>
-					<li>Um modelo (model) armazena dados e notifica suas visões e controladores associados quando há uma mudança em seu estado. Estas notificações permitem que as visões produzam saídas atualizadas e que os controladores alterem o conjunto de comandos disponíveis. Uma implementação passiva do MVC monta estas notificações, devido a aplicação não necessitar delas ou a plataforma de software não suportá-las.</li>
-					<li>A visão (view) Gera uma representação (Visão) dos dados presentes no modelo solicita do modelo.</li>
-				</ul>
+					<p>
+						Além de dividir a aplicação em três tipos de componentes, o desenho MVC define as interações entre eles.
+					</p>
+					
+					<ul>
+						<li>Um controlador (controller) envia comandos para o modelo para atualizar o seu estado por exemplo, editando um documento). O controlador também pode enviar comandos para a visão associada para alterar a apresentação da visão do modelo (por exemplo, percorrendo um documento).</li>
+						<li>Um modelo (model) armazena dados e notifica suas visões e controladores associados quando há uma mudança em seu estado. Estas notificações permitem que as visões produzam saídas atualizadas e que os controladores alterem o conjunto de comandos disponíveis. Uma implementação passiva do MVC monta estas notificações, devido a aplicação não necessitar delas ou a plataforma de software não suportá-las.</li>
+						<li>A visão (view) Gera uma representação (Visão) dos dados presentes no modelo solicita do modelo.</li>
+					</ul>
 
+				</div>
 			</div>
-		</div>
 
 		<div class="container">
 			<!-- Example row of columns -->
@@ -261,14 +257,20 @@ include_once "builder_classes.php";
 				</div>
 		</section>
 
-		<section>
-			<div class="container">
-				<h1>Bibliografia</h1>
-				<ul>
-					<li><a href="http://codeigniterbrasil.com/">codeigniterbrasil.com</a></li>
-					<li><a href="https://pt.wikipedia.org/wiki/MVC">pt.wikipedia.org/wiki/MVC</a></li>
-					<li><a href="http://www.jakowicz.com/builder-pattern-in-php/">www.jakowicz.com/builder-pattern-in-php/</a></li>
-				</ul>
+		<section id="bibliografia">
+			<div class="jumbotron">
+				<div class="container">
+					<h1>Bibliografia</h1>
+					<h2>
+						Abaixo segue a lista de sites que foram consultados
+					</h2>
+					<ul>
+						<li><a href="http://codeigniterbrasil.com/">codeigniterbrasil.com</a></li>
+						<li><a href="https://pt.wikipedia.org/wiki/MVC">pt.wikipedia.org/wiki/MVC</a></li>
+						<li><a href="http://www.jakowicz.com/builder-pattern-in-php/">www.jakowicz.com/builder-pattern-in-php/</a></li>
+					</ul>
+
+				</div>
 			</div>
 		</section>
 
@@ -278,5 +280,13 @@ include_once "builder_classes.php";
 			<p>&copy; 2016 Uniritter.</p>
 		</footer>
 	</div> <!-- /container -->
+	<script>
+		jQuery(document).ready(function($) {
+			$('#navbar li').on('click', function(){
+				$('#navbar li').removeClass('active');
+				$(this).addClass('active');
+			});
+		});
+	</script>
 </body>
 </html>
